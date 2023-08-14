@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>SMG - Administración de usuarios</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/Articles-Badges.css">
+  <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark.css">
+  <link rel="stylesheet" href="css/alertify.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3">
+    <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span
+          class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"
+          style="background: var(--bs-yellow);"></span><span id="bv"></span></a><button data-bs-toggle="collapse"
+        class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navcol-5">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Usuarios</a></li>
+        </ul><a class="btn btn-primary ms-md-2" role="button" href="#" onclick="cerrarSesion();">Cerrar Sesión</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container py-4 py-xl-5">
+    <div class="row mb-5">
+      <div class="col-md-8 col-xl-6 text-center mx-auto">
+        <h2>Administración de usuarios</h2>
+        <p class="w-lg-50">Desde este apartado del sistema usted puede administrar los usuarios del sistema</p>
+      </div>
+    </div>
+    <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+      <div class="col">
+        <div class="p-4"><span class="badge rounded-pill bg-primary mb-2"
+            style="background: var(--bs-orange);">Usuarios</span>
+          <h4>Crear usuarios</h4>
+          <p>Desde este apartado puede crear nuevos usuarios</p>
+          <div class="d-flex">
+            <div>
+              <a href="creacion-usuario.html">
+                <button class="btn btn-primary" type="button" style="background: var(--bs-success);">Ingresar</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="p-4"><span class="badge rounded-pill bg-primary mb-2">Usuarios</span>
+          <h4>Administrar permisos</h4>
+          <p>Desde este apartado usted puede administrar los permisos de los usuarios</p>
+          <div class="d-flex">
+            <div>
+              <a href="gestion-usuario.html">
+                <button class="btn btn-primary" type="button" style="background: var(--bs-success);">Consultar</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="p-4"><span class="badge rounded-pill bg-dark mb-2">Contenido</span>
+          <h4>Administrar contenido</h4>
+          <p>Desde este apartado usted puede ingresar al segmento de manejo de contenido del SMG</p>
+          <div class="d-flex">
+            <div>
+              <a href="index-boletines.html">
+                <button class="btn btn-primary" type="button" style="background: var(--bs-success);">Acceder</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="text-center bg-dark">
+    <div class="container text-white py-4 py-lg-5">
+      <h4>Servicio Meteorológico de Guatemala<br></h4>
+    </div>
+  </footer>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/jquery-3.5.1.js"></script>
+  <script src="js/alertify.js"></script>
+  <script src="assets/js/validarUsuario.js"></script>
+</body>
+
+</html>

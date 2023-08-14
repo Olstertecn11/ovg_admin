@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>SMG - Administración de contenido</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/Articles-Badges.css">
+  <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark.css">
+  <link rel="stylesheet" href="css/alertify.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3">
+    <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span
+          class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"
+          style="background: var(--bs-yellow);"></span><span id="bv"></span></a><button data-bs-toggle="collapse"
+        class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navcol-5">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Boletines</a></li>
+          <li class="nav-item"><a class="nav-link" href="index-publicaciones.html">Publicaciones</a></li>
+          <li class="nav-item"><a class="nav-link" href="index-investigaciones.html">Investigaciones</a></li>
+        </ul><a class="btn btn-primary ms-md-2" role="button" href="#" onclick="cerrarSesion();">Cerrar Sesión</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container py-4 py-xl-5">
+    <div class="row mb-5">
+      <div class="col-md-8 col-xl-6 text-center mx-auto">
+        <h2>Mantenimiento de Boletines SMG</h2>
+        <p class="w-lg-50">Desde este apartado del sistema usted puede subir nuevos boletines al sistema y visualizarlos
+        </p>
+      </div>
+    </div>
+    <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+      <div class="col">
+        <div class="p-4"><span class="badge rounded-pill bg-primary mb-2"
+            style="background: var(--bs-orange);">Boletines</span>
+          <h4>Subir Boletines</h4>
+          <p>Ingrese nuevos boletines al sistema para mostrar en el sitio web del SMG. Archivos admitidos: PDF</p>
+          <div class="d-flex">
+            <div>
+              <a href="bol-subir.html">
+                <button class="btn btn-primary" type="button" style="background: var(--bs-success);">Ingresar</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="p-4"><span class="badge rounded-pill bg-primary mb-2">Boletines</span>
+          <h4>Consultar boletines</h4>
+          <p>Desde este apartado usted puede visualizar los boletines que existen actualmente en el sistema.<br></p>
+          <div class="d-flex">
+            <div>
+              <a href="bol-consultar.html">
+                <button class="btn btn-primary" type="button" style="background: var(--bs-success);">Consultar</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="p-4"><span class="badge rounded-pill bg-warning mb-2">Noticias</span>
+          <h4>Gestionar Noticias</h4>
+          <p>En esta seccion se pueden gestionar las noticias que se mostraran en la pagina<br></p>
+          <div class="d-flex">
+            <div>
+              <a href="noticias.html">
+                <button class="btn btn-primary" type="button" style="background: var(--bs-success);">Consultar</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-auto" id="onad">
+        <div class="p-4"><span class="badge rounded-pill bg-danger mb-2">Administrativo</span>
+          <h4>Administrar Usuarios</h4>
+          <p>Desde este apartado usted puede ingresar al segmento de administración de usuarios del SMG</p>
+          <div class="d-flex">
+            <div>
+              <a href="admin-usuario.html">
+                <button class="btn btn-primary" type="button" style="background: var(--bs-dark);">Acceder</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="text-center bg-dark">
+    <div class="container text-white py-4 py-lg-5">
+      <h4>Servicio Meteorológico de Guatemala<br></h4>
+    </div>
+  </footer>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/jquery-3.5.1.js"></script>
+  <script src="js/alertify.js"></script>
+  <script src="assets/js/validar.js"></script>
+</body>
+
+</html>

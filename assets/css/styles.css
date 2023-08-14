@@ -1,0 +1,17 @@
+.fondo{
+    background-image: url('../img/back-login.jpg');
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    z-index: -1;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.recuperacion{
+	font-size: 70%;
+}
+
+

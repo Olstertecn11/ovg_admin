@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>SVG - Recuperación de contraseña</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Articles-Badges.css">
+    <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark.css">
+    <link rel="stylesheet" href="../css/alertify.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <img class="fondo" height="100%" width="100%" style="z-index:-1;position: fixed; left:0; top:0;">
+    <section class="position-relative py-4 py-xl-5"  id="formulario" style="display:none">
+        <div class="container">
+            <div class="row mb-5" style="background-color: #76e2f5; border-radius: 5px;">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h2>Recuperación de contraseña <b id="usuario"></b></h2>
+                    <p class="w-lg-50">Ingrese su nueva contraseña.</p>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6 col-xl-4" >
+                    <div class="card mb-5">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <div class="text-center">
+                                <div class="mb-3">
+                                    Ingresar contraseña:
+                                    <input class="form-control" type="password" placeholder="Contraseña" id="cc1">
+                                </div>
+                                <div class="mb-3">
+                                    Verificar contraseña:
+                                    <input class="form-control" type="password" placeholder="Verificación" id="cc2">
+                                </div>
+                                <div class="mb-3">
+                                    <button class="btn btn-primary d-block w-100" id="submitButton">Reestablecer contraseña</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <div id="nonvalid" style="height: 100%; display:none; width: 100%; background-color: rgb(238, 70, 70); text-align: center; justify-content: center; align-items: center;">
+        <h2>El token ingresado no es válido o ha caducado</h2>
+        <p>
+            Por favor inicie de nuevo el proceso de recuperación de contraseña <a href="login.html"> aquí.</a>
+        </p>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/alertify.js"></script>
+    <script src="assets/js/contraNueva.js"></script>
+</body>
+
+</html>
