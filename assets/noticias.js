@@ -4,6 +4,8 @@ const btn_crear = document.getElementById('btn_crear');
 const estado = document.getElementById('estado');
 const contenido = document.getElementById('contenido');
 const titulo = document.getElementById('titulo');
+var nom = 0;
+var per = 0;
 
 
 function saveInfo() {
@@ -39,5 +41,26 @@ function clearAll() {
 btn_crear.addEventListener('click', () => {
   saveInfo();
 });
+
+
+$(document).ready(
+  function() {
+    //datos sesión
+    $.ajax({
+      url: 'php/sesion.php',
+      type: 'POST',
+      success: function(data) {
+        var vars = data.split(",");
+        per = vars[0]
+        nom = vars[1];
+      }
+    });
+  }
+)
+
+
+function changeFormState() {
+  var item = document.querySelector(".add_form");
+}
 
 
