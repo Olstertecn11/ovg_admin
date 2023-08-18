@@ -60,7 +60,23 @@ $(document).ready(
 
 
 function changeFormState() {
-  var item = document.querySelector(".add_form");
+  var item = document.querySelector("#add_form");
+  var button = document.getElementById("btn_show");
+  if (item.classList.contains("inactive")) {
+    item.classList.remove(("inactive"));
+    item.classList.add(("active"));
+    button.innerText = "Ocultar Formulario";
+  }
+  else {
+    button.innerText = "Mostrar Formulario";
+    item.classList.add(("inactive"));
+    item.classList.remove(("active"));
+  }
+}
+
+
+function loadNews() {
+
 }
 
 

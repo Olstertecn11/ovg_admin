@@ -1,3 +1,7 @@
-.add_form{
+.inactive{
   display: none !important;
+}
+
+.active{
+  display: block !important;
 }
