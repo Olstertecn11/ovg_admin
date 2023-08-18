@@ -5,3 +5,8 @@
 .active{
   display: block !important;
 }
+
+
+.row-img{
+  width: 100px !important;
+}
