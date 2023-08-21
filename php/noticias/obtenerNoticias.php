@@ -1,5 +1,5 @@
 <?php
-    include ('var.php');
+    include ('./../var.php');
     date_default_timezone_set('America/Guatemala');
     if(!$mysqli){
         die("Error al conectar con OVG!");
@@ -14,9 +14,9 @@
             while($row = $result->fetch_assoc()){
                 $registro = [
                     "id"=>$row['id'],
-                    "nombre"=>$row['titulo'],
+                    "titulo"=>$row['titulo'],
                     "contenido"=>$row['contenido'],
-                    "email"=>$row['imagen'],
+                    "imagen"=>$row['imagen'],
                     "estado"=>$row['estado'],
                     "fecha"=>$row['fecha']
                 ];
