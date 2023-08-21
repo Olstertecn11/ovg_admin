@@ -96,6 +96,9 @@ function loadNews() {
               <td>
                 <button class="btn btn-primary" onclick="openModal(${item.id})" data-micromodal-trigger>Visualizar</button>
               </td>
+              <td>
+                <button class="btn btn-danger" onclick="deleteItem(${item.id})" >Eliminar</button>
+              </td>
             </tr>
         `
       })
@@ -104,6 +107,23 @@ function loadNews() {
       console.log(error);
     }
   });
+}
+
+function deleteItem(id) {
+  var datosDelForm = new FormData();
+  datosDelForm.append('id', id);
+  $.ajax({
+    url: 'php/noticias/eliminarNoticia.php',
+    type: 'POST',
+    data: datosDelForm,
+    contentType: false,
+    processData: false,
+    success: function(response) {
+      clearAll();
+      Swal.fire({ title: 'Mensaje', text: response, confirmButtonText: 'Cool' });
+    }
+  });
+  loadNews();
 }
 
 
@@ -116,12 +136,14 @@ function openModal(myid) {
   var modal = createModal();
   modal.open();
   modal.setContent(`<h1>${item[0].titulo}</h1>
-  <textarea>${item[0].contenido}</textarea>
+  <textarea style="width:700px !important;" id="txt_contenido">${item[0].contenido}</textarea>
 `);
 
   // modal.setContent(``);
 
   modal.addFooterBtn('Guardar cambios', 'tingle-btn tingle-btn--primary', function() {
+    var contenido = document.getElementById("txt_contenido").value
+    alert(contenido);
     modal.close();
   });
 
