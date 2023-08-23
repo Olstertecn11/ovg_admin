@@ -38,7 +38,7 @@
             if($contador>0){
                 
                 if($estado==0){
-                    echo 3;//no se dar�� acceso
+                    echo 6;//no se dar�� acceso
                 }
                 else{
                     //inicializamos la sesión

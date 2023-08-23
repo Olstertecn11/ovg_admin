@@ -28,6 +28,8 @@ function verifySession() {
           //en este segmento no puede estar el usuario
           window.location.href = "index-boletines.html"
           break;
+        case '3':
+          window.location.href = "admin-usuario.html"
         default:
       }
     }
@@ -73,6 +75,10 @@ $(document).ready(
               window.location.href = "index-boletines.html"
               break;
             case '3':
+              window.location.href = "admin-usuario.html"
+              // alertify.alert("Error", "El usuario ingresado esta deshabilitado");
+              break;
+            case '6':
               alertify.alert("Error", "El usuario ingresado esta deshabilitado");
               break;
             default:
