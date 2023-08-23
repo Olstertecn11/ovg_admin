@@ -26,7 +26,7 @@ function verifySession() {
         case '2':
           //usuario
           //en este segmento no puede estar el usuario
-          window.location.href = "index-boletines.html"
+          window.location.href = "admin-contenido.html"
           break;
         case '3':
           window.location.href = "admin-usuario.html"
@@ -67,15 +67,15 @@ $(document).ready(
         success: function(response) {
           switch (response) {
             case '1':
-              //usuario normal
+              //usuario admin 
               window.location.href = "admin-usuario.html"
               break;
             case '2':
-              //usuario admin
-              window.location.href = "index-boletines.html"
+              //usuario creador de contenido 
+              window.location.href = "admin-contenido.html"
               break;
             case '3':
-              window.location.href = "admin-usuario.html"
+              window.location.href = "admin-contenido.html"
               // alertify.alert("Error", "El usuario ingresado esta deshabilitado");
               break;
             case '6':

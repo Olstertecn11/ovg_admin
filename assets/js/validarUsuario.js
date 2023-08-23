@@ -24,7 +24,6 @@ $(document).ready(
           case '2':
             //usuario
             //en este segmento no puede estar el usuario
-            window.location.href = "index-boletines.html"
             break;
           default:
             //not set, reset

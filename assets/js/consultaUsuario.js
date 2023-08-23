@@ -120,10 +120,10 @@ function actuTabla() {
 }
 
 function deshabilitar(id, name) {
-  if (!puedoHacerlo(per)) {
-    alertify.error("No tiene permiso para realizar esta accion");
-    return;
-  }
+  // if (!puedoHacerlo(per)) {
+  //   alertify.error("No tiene permiso para realizar esta accion");
+  //   return;
+  // }
   alertify.confirm("Confirmación", "¿Desea DESHABILITAR el usuario " + name + " con Id: " + id + "?",
     function() {
       alertify.success('Actualizando...');
@@ -155,10 +155,10 @@ function deshabilitar(id, name) {
 }
 
 function habilitar(id, name) {
-  if (!puedoHacerlo(per)) {
-    alertify.error("No tiene permiso para realizar esta accion");
-    return;
-  }
+  // if (!puedoHacerlo(per)) {
+  //   alertify.error("No tiene permiso para realizar esta accion");
+  //   return;
+  // }
   alertify.confirm("Confirmación", "¿Desea HABILITAR el usuario " + name + " con Id: " + id + "?",
     function() {
       alertify.success('Actualizando...');
@@ -206,10 +206,10 @@ function recargar() {
 }
 
 function perms(id, name) {
-  if (!puedoHacerlo(per)) {
-    alertify.error("No tiene permiso para realizar esta accion");
-    return;
-  }
+  // if (!puedoHacerlo(per)) {
+  //   alertify.error("No tiene permiso para realizar esta accion");
+  //   return;
+  // }
   var html = "<h4>" + id + " - " + name + "</h4>";
   html += '<table class="table table-striped table-hover table-bordered">';
   html += "<thead>\
@@ -275,10 +275,10 @@ function perms(id, name) {
 }
 
 function qPerm(idPerm) {
-  if (!puedoHacerlo(per)) {
-    alertify.error("No tiene permiso para realizar esta accion");
-    return;
-  }
+  // if (!puedoHacerlo(per)) {
+  //   alertify.error("No tiene permiso para realizar esta accion");
+  //   return;
+  // }
   //quitar permiso con id de idPerm
   alertify.confirm('Confirmar acción', '¿Desea quitar el permiso?',
     function() {
@@ -307,10 +307,10 @@ function qPerm(idPerm) {
 }
 
 function addPerm(id, name) {
-  if (!puedoHacerlo(per)) {
-    alertify.error("No tiene permiso para realizar esta accion");
-    return;
-  }
+  // if (!puedoHacerlo(per)) {
+  //   alertify.error("No tiene permiso para realizar esta accion");
+  //   return;
+  // }
   var permiso = document.getElementById('permisoCombo').value;
   alertify.confirm('Confirmar acción', '¿Desea agregar el permiso al usuario ' + name + '?',
     function() {

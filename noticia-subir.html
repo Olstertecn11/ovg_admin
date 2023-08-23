@@ -25,18 +25,14 @@
           class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navcol-5">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#">Boletines</a></li>
-          <li class="nav-item"><a class="nav-link" href="index-publicaciones.html">Publicaciones</a></li>
-          <li class="nav-item"><a class="nav-link" href="index-investigaciones.html">Investigaciones</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index-boletines.html">Boletines</a></li>
+          <li class="nav-item"><a class="nav-link" href="index-noticias.html">Noticias</a></li>
         </ul><a class="btn btn-primary ms-md-2" role="button" href="#" onclick="cerrarSesion();">Cerrar Sesión</a>
       </div>
     </div>
   </nav>
 
-  <div class="container" style="margin-top: 2%;">
-    <button class="btn btn-warning" onclick="changeFormState()" id="btn_show">Crear Noticia</button>
-  </div>
-  <div class="container py-4 py-xl-5 inactive" id="add_form">
+  <div class="container py-4 py-xl-5" id="add_form">
     <div class="row mb-5">
       <div class="col-md-8 col-xl-6 text-center mx-auto">
         <h2>Mantenimiento de Noticias OVG</h2>
@@ -45,34 +41,41 @@
         </p>
       </div>
     </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <table class="table">
-            <thead class="thead-dark">
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Titulo</th>
-                <th scope="col">Imagen</th>
-                <th scope="col">Estado</th>
-                <th scope="col">Fecha</th>
-                <th scope="col">Visualizar</th>
-              </tr>
-            </thead>
-            <tbody id="news_table">
-            </tbody>
-          </table>
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <div class="card card-body">
+          <h2 class="text-center">Cree su Noticia</h2>
+          <div class="form-group mt-4">
+            <input type="text" id="titulo" placeholder="Titulo" class="form-control">
+          </div>
+          <textarea id="contenido" cols="30" rows="10" class="form-control mt-4" placeholder="Contenido">
+          </textarea>
+          <label for="" class="mt-2">Estado</label>
+          <select id="estado" class="form-select mt-4" aria-label="Seleccione un estado para la noticia">
+            <option value="1" selected>Crear</option>
+            <option value="2">Revision</option>
+            <option value="3">Publicar</option>
+          </select>
+          <div class="form-group mt-4">
+            <label>Fecha</label>
+            <input type="date" value="2017-06-01" id="fecha" class="form-control mt-4">
+          </div>
+          <div class="form-group mt-4">
+            <label>Imagen</label>
+            <input type="file" id="file" class="form-control mt-4" accept="image/*">
+          </div>
+          <button class="btn btn-success mt-4" id="btn_crear">Crear</button>
         </div>
       </div>
     </div>
+  </div>
 
 
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/jquery-3.5.1.js"></script>
-    <script src="js/alertify.js"></script>
-    <script src="assets/js/consultaNoticia.js"></script>
-    <script src="assets/js/closeSession.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/jquery-3.5.1.js"></script>
+  <script src="js/alertify.js"></script>
+  <script src="assets/js/subirNoticia.js"></script>
+  <script src="assets/js/closeSession.js"></script>
 </body>
 
 </html>

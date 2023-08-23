@@ -39,7 +39,6 @@ $(document).ready(
 
     $('#submitButton').on('click', function() {
       if (!puedoHacerlo(per)) {
-
         alertify.alert("Alerta", "No tiene los permisos necesarios para realizar esta accion");
         return;
       }
