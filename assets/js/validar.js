@@ -25,6 +25,7 @@ $(document).ready(
             $('#onad').css('display', 'block');
             break;
           case '2':
+            window.location.href = "admin-contenido.html"
             //usuario
             //en este segmento si puede estar el usuario
             break;

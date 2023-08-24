@@ -11,7 +11,13 @@
   <link rel="stylesheet" href="css/alertify.css">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/noticias.css">
-  <link rel="stylesheet" href="css/tingle.css">
+  <link rel="stylesheet" href="css/custom_tingle.css">
+  <script>
+    window.addEventListener('beforeunload', function (e) {
+      e.preventDefault();
+      e.returnValue = '';
+    });
+  </script>
   <script src="js/tingle.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
@@ -70,20 +76,17 @@
       <div class="col-md-8">
         <div class="row" style="background:#000000; padding: 40px;">
           <div class="col-md-8">
-            <img style="width: 100%;" src="http://localhost/dev/ovg/img/noticias.jpg" alt="">
+            <img style="width: 100%;" src="http://localhost/dev/ovg/img/noticias.jpg" id="img-preview" alt="">
           </div>
           <div class="col-md-4">
-            <h1 class="card-title text-center" style="color:#E35816;">Titulo</h1>
-            <p class=" mt-4 text-white " style="text-align: justify;">
-              jfkdsjfkasfjklasdjfklsadkfkasdfkjsfkd
-              fklsdjfklsdkfksdkfjskfksfksdkfj
-              jfkdsjfkasfjklasdjfklsadkfkasdfkjsfkd
-              jfkdsjfkasfjklasdjfklsadkfkasdfkjsfkd
-              fklsdjfklsdkfksdkfjskfksfksdkfj
+            <h1 class="card-title text-center" id="title-preview" style="color:#E35816;">Titulo</h1>
+            <p class=" mt-4 text-white " style="text-align: justify;" id="contenido-preview">
+              Contenido de la Noticia...
             </p>
-            <p class="mt-4  text-center" style="color:#E35816">Fecha</p>
+            <p class="mt-4  text-center" style="color:#E35816" id="date-preview">Fecha</p>
           </div>
         </div>
+        <button class="btn btn-success mt-4" onclick="openModal()">Previsualizacion en tamaño real</button>
       </div>
     </div>
   </div>
