@@ -19,23 +19,24 @@
 
   <link rel="stylesheet" href="css/alertify.css">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/nav.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
 </head>
 
 <body>
-  <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3">
+  <nav class="navbar  navbar-expand-md py-3">
     <div class="container"><a class="navbar-brand d-flex align-items-center" href="admin-usuario.html"><span
-          class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"
-          style="background: var(--bs-yellow);"></span><span id="bv"></span></a><button data-bs-toggle="collapse"
-        class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span
-          class="navbar-toggler-icon"></span></button>
+          class="bs-icon-sm bs-icon-rounded  d-flex justify-content-center align-items-center me-2 bs-icon"></span><span
+          id="bv"></span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5"><span
+          class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navcol-5">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link active" href="admin-usuario.html">Usuarios</a></li>
-        </ul><a class="btn btn-primary ms-md-2" role="button" href="#" onclick="cerrarSesion();">Cerrar Sesión</a>
+        </ul><a class="btn ms-md-2" role="button" href="#" onclick="cerrarSesion();">Cerrar Sesión</a>
       </div>
     </div>
   </nav>
-  <div class="container py-4 py-xl-5">
+  <div class="container py-2 py-xl-2">
     <div class="row mb-5">
       <div class="col-md-8 col-xl-6 text-center mx-auto">
         <h2>Consultar y gestionar usuarios</h2>
@@ -44,13 +45,13 @@
       </div>
     </div>
   </div>
-  <div id="botones" style="padding:1em;">
+  <div id="botones" style="padding-left:40px;">
     <div class="btn-group" role="group" aria-label="Acciones Generales">
       <button type="button" class="btn btn-primary" onclick="recargar()">Recargar Tabla</button>
       <button type="button" class="btn btn-warning reset">Reiniciar Filtros</button>
     </div>
   </div>
-  <div class="table-responsive">
+  <div class="table-responsive" style="padding: 40px;">
     <table class="table tablesorter" id="tabla">
       <thead>
         <tr>
@@ -63,14 +64,6 @@
         </tr>
       </thead>
       <tbody id="cuerpoTabla">
-        <!--<tr>
-                    <td class="primary">Cell 1</td>
-                    <td class="secondary">Cell 2</td>
-                </tr>
-                <tr>
-                    <td class="tertiary">Cell 3</td>
-                    <td>Cell 4</td>
-                </tr>-->
       </tbody>
       <tfoot>
         <tr>
@@ -84,9 +77,9 @@
       </tfoot>
     </table>
   </div>
-  <footer class="text-center bg-dark">
-    <div class="container text-white py-4 py-lg-5">
-      <h4>Servicio Vulcanológico de Guatemala<br></h4>
+  <footer class="text-center">
+    <div class="container text-white py-2 py-lg-2">
+      <h6>Servicio Vulcanológico de Guatemala<br></h6>
     </div>
   </footer>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
