@@ -38,7 +38,7 @@ $(document).ready(
     });
 
     $('#submitButton').on('click', function() {
-      if (!puedoHacerlo(per)) {
+      if (per === 1 || per === 2) {
         alertify.alert("Alerta", "No tiene los permisos necesarios para realizar esta accion");
         return;
       }
@@ -70,6 +70,7 @@ $(document).ready(
       }
       if (vpass != pass) {
         alertify.alert("Error", "¡Las contraseñas ingresadas no coinciden!")
+        return;
       }
       //ahora si ya dejará ingresar
       $.ajax({
@@ -124,7 +125,7 @@ function cerrarSesion() {
 function verificar() {
   var usuario = document.getElementById('NU').value;
   $.ajax({
-    url: "../php/verificar.php",
+    url: "php/verificar.php",
     type: 'POST',
     data: { user: usuario },
     async: true,

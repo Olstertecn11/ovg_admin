@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>SMG - Administración de contenido</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/Articles-Badges.css">
+  <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark.css">
+  <link rel="stylesheet" href="css/alertify.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/noticias.css">
+  <link rel="stylesheet" href="css/custom_tingle.css">
+  <script>
+    window.addEventListener('beforeunload', function (e) {
+      e.preventDefault();
+      e.returnValue = '';
+    });
+  </script>
+  <script src="js/tingle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3">
+    <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span
+          class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"
+          style="background: var(--bs-yellow);"></span><span id="bv"></span></a><button data-bs-toggle="collapse"
+        class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navcol-5">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index-boletines.html">Boletines</a></li>
+          <li class="nav-item"><a class="nav-link" href="index-noticias.html">Noticias</a></li>
+        </ul><a class="btn btn-primary ms-md-2" role="button" href="#" onclick="cerrarSesion();">Cerrar Sesión</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-4 py-xl-5" id="add_form">
+    <div class="row mb-5">
+      <div class="col-md-8 col-xl-6 text-center mx-auto">
+        <h2>Mantenimiento de Noticias OVG</h2>
+        <p class="w-lg-50">
+          En este apartado puede crear, modificar y elminar noticias
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card card-body">
+          <h2 class="text-center">Cree su Noticia</h2>
+          <div class="form-group mt-4">
+            <input type="text" id="titulo" placeholder="Titulo" class="form-control">
+          </div>
+          <textarea id="contenido" cols="30" rows="10" class="form-control mt-4" placeholder="Contenido">
+          </textarea>
+          <label for="" class="mt-2">Estado</label>
+          <select id="estado" class="form-select mt-4" aria-label="Seleccione un estado para la noticia">
+            <option value="1" selected>Crear</option>
+            <option value="2">Revision</option>
+            <option value="3">Publicar</option>
+          </select>
+          <div class="form-group mt-4">
+            <label>Fecha</label>
+            <input type="date" value="2017-06-01" id="fecha" class="form-control mt-4">
+          </div>
+          <div class="form-group mt-4">
+            <label>Imagen</label>
+            <input type="file" id="file" class="form-control mt-4" accept="image/*">
+          </div>
+          <button class="btn btn-success mt-4" id="btn_crear">Crear</button>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="row" style="background:#000000; padding: 40px;">
+          <div class="col-md-8">
+            <img style="width: 100%;" src="http://localhost/dev/ovg/img/noticias.jpg" id="img-preview" alt="">
+          </div>
+          <div class="col-md-4">
+            <h1 class="card-title text-center" id="title-preview" style="color:#E35816;">Titulo</h1>
+            <p class=" mt-4 text-white " style="text-align: justify;" id="contenido-preview">
+              Contenido de la Noticia...
+            </p>
+            <p class="mt-4  text-center" style="color:#E35816" id="date-preview">Fecha</p>
+          </div>
+        </div>
+        <button class="btn btn-success mt-4" onclick="openModal()">Previsualizacion en tamaño real</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/jquery-3.5.1.js"></script>
+  <script src="js/alertify.js"></script>
+  <script src="assets/js/editarNoticia.js"></script>
+  <script src="assets/js/closeSession.js"></script>
+</body>
+
+</html>

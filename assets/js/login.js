@@ -65,6 +65,7 @@ $(document).ready(
         type: 'POST',
         data: { nomU: name, pass: pass },
         success: function(response) {
+          console.log(response);
           switch (response) {
             case '1':
               //usuario admin 
@@ -78,6 +79,10 @@ $(document).ready(
               window.location.href = "admin-contenido.html"
               // alertify.alert("Error", "El usuario ingresado esta deshabilitado");
               break;
+            case '4':
+              window.location.href = "revisor-contenido.html"
+              break;
+
             case '6':
               alertify.alert("Error", "El usuario ingresado esta deshabilitado");
               break;

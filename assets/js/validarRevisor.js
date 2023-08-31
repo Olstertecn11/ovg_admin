@@ -30,7 +30,6 @@ $(document).ready(
             //en este segmento si puede estar el usuario
             break;
           case '4':
-            window.location.href = "revisor-contenido.html"
             break;
           default:
             //not set, reset

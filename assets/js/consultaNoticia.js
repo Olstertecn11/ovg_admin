@@ -1,30 +1,87 @@
+let all_news = [];
+let mytable = document.getElementById("news_table");
+const estados = ["Creada", "Edicion", "Revision", "Publicada"]
+let per = "";
+let nom = "";
 
 
-function loadNews() {
-  var mytable = document.getElementById("news_table");
-  $.ajax({
-    url: 'php/noticias/obtenerNoticias.php',
-    type: 'POST',
-    async: false,
-    success: function(data) {
-      all_news = JSON.parse(data);
-      $.each(JSON.parse(data), (key, item) => {
-        mytable.innerHTML += `
+$(document).ready(
+  function() {
+    //datos sesión
+    $.ajax({
+      url: 'php/sesion.php',
+      type: 'POST',
+      success: function(data) {
+        var vars = data.split(",");
+        per = vars[0]
+        nom = vars[1];
+      }
+    });
+  }
+)
+
+
+
+
+//Event Listeners
+document.getElementById("filter").addEventListener("change", (e) => {
+  getNews();
+  if (e.target.value == 5 || e.target.value == 0) {
+    mytable.innerHTML = '';
+    updateTable(all_news);
+  }
+  else {
+    mytable.innerHTML = '';
+    var data = all_news.filter((item) => item.estado == e.target.value);
+    updateTable(data);
+  }
+});
+
+// ===============   END Listeners   ===============
+
+
+function updateTable(data) {
+  if (data.length > 0) {
+    document.getElementById('alert').style = 'display:none';
+    document.getElementById('parent-table').style = 'display:block';
+    const mydata = data.map((item, key) => {
+      mytable.innerHTML += `
             <tr>
               <th scope="row">${key}</th>
               <td>${item.titulo}</td>
               <td><img class="row-img" src="./img/Noticias/${item.imagen}" alt=""></td>
-              <td>${item.estado}</td>
+              <td>${estados[item.estado - 1]}</td>
               <td>${item.fecha}</td>
               <td>
-                <button class="btn btn-primary" onclick="openModal(${item.id})" data-micromodal-trigger>Visualizar</button>
+                <button class="btn btn-primary" onclick="editItem(${item.id})" data-micromodal-trigger>Visualizar</button>
               </td>
               <td>
                 <button class="btn btn-danger" onclick="deleteItem(${item.id})" >Eliminar</button>
               </td>
             </tr>
         `
-      })
+    });
+  }
+  else {
+    document.getElementById('parent-table').style = 'display: none;';
+    document.getElementById('alert').style = 'display:block;';
+  }
+}
+
+function editItem(id) {
+  const file = "noticia-editar.html"
+  window.location.href = `${file}?key=${id}`;
+}
+
+
+function getNews() {
+  $.ajax({
+    url: 'php/noticias/obtenerNoticias.php',
+    type: 'POST',
+    async: false,
+    success: function(data) {
+      data = data.substring(0, data.length - 3);
+      all_news = JSON.parse(data);
     },
     error: function(jqXHR, error) {
       console.log(error);
@@ -42,15 +99,20 @@ function deleteItem(id) {
     contentType: false,
     processData: false,
     success: function(response) {
-      clearAll();
       Swal.fire({ title: 'Mensaje', text: response, confirmButtonText: 'Cool' });
+      getNews();
+      updateTable(all_news);
     }
   });
-  loadNews();
 }
 
 
-loadNews();
+
+
+
+
+//===============================   Modal Functions  =============================== 
+
 
 function openModal(myid) {
   const item = all_news.filter((el) => el.id == myid ? el : '');
@@ -59,7 +121,7 @@ function openModal(myid) {
   var modal = createModal();
   modal.open();
   modal.setContent(`<h1>${item[0].titulo}</h1>
-  <textarea style="width:700px !important;" id="txt_contenido">${item[0].contenido}</textarea>
+<textarea style="width:700px !important;" id="txt_contenido">${item[0].contenido}</textarea>
 `);
 
   // modal.setContent(``);
@@ -89,14 +151,16 @@ function createModal() {
       console.log('modal closed');
     },
     beforeClose: function() {
-      // here's goes some logic
-      // e.g. save content before closing the modal
       return true; // close the modal
-      return false; // nothing happens
     }
   });
 }
 
+// Main Methods
+
+
+getNews();
+updateTable(all_news);
 
 
 

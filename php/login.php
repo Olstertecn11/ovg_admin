@@ -49,7 +49,6 @@
                     $_SESSION['nPerm']=$permiso;
                     $_SESSION['UID']=uniqid();
                     $_SESSION['fecha']=time();
-                        
                 }
             }
             else{
