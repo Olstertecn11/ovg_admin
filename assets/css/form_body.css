@@ -1,0 +1,33 @@
+body{
+  background: black;
+}
+
+
+.btn{
+  background: #C84E13;
+  color: white;
+  outline: none;
+}
+
+.card{
+  background: black;
+  color: white;
+}
+
+.card .form-control{
+  background: black;
+  border: 1px solid #C84E13;
+  color: white;
+  outline: none;
+}
+
+.form-control:focus, .btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+.btn:hover{
+  background: #973A0E;
+  color: white;
+}

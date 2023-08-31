@@ -9,30 +9,24 @@
   <link rel="stylesheet" href="assets/css/Articles-Badges.css">
   <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark.css">
   <link rel="stylesheet" href="css/alertify.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/form_body.css">
+  <link rel="stylesheet" href="assets/css/nav.css">
 </head>
 
 <body>
-  <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3">
+  <nav class="navbar  navbar-expand-md  py-3">
     <div class="container"><a class="navbar-brand d-flex align-items-center" href="admin-usuario.html"><span
-          class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"
-          style="background: var(--bs-yellow);"></span><span id="bv"></span></a><button data-bs-toggle="collapse"
-        class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span
-          class="navbar-toggler-icon"></span></button>
+          class="bs-icon-sm bs-icon-rounded d-flex justify-content-center align-items-center me-2 bs-icon"></span><span
+          id="bv"></span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5"><span
+          class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navcol-5">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link active" href="admin-usuario.html">Usuarios</a></li>
-        </ul><a class="btn btn-primary ms-md-2" role="button" href="#" onclick="cerrarSesion();">Cerrar Sesión</a>
+        </ul><a class="btn ms-md-2" role="button" onclick="cerrarSesion();">Cerrar Sesión</a>
       </div>
     </div>
   </nav>
   <div class="container py-4 py-xl-5">
-    <!--<div class="row mb-5">
-            <div class="col-md-8 col-xl-6 text-center mx-auto">
-                <h2>Ingresar Imágenes</h2>
-                <p class="w-lg-50">Desde este apartado del sistema usted puede ingresar nuevas imágenes de volcanes para mostrar en el apartado de "Imágenes comparativas"</p>
-            </div>
-        </div>-->
     <section class="position-relative py-4 py-xl-5">
       <div class="container position-relative">
         <div class="row d-flex justify-content-center">
@@ -68,7 +62,10 @@
                     <label class="form-label">E-mail de contacto</label>
                     <input class="form-control" type="email" placeholder="nombre@dominio" id="EM">
                   </div>
-                  <div class="btn btn-primary d-block w-100" id="submitButton">Crear usuario</div>
+                  <div class="container">
+                    <p class="text-success" id="msg">Interpretando Usuario...</p>
+                  </div>
+                  <div class="btn d-block w-100" id="submitButton">Crear usuario</div>
                 </form>
               </div>
             </div>
@@ -89,9 +86,9 @@
       </figcaption>
     </div>
   </div>
-  <footer class="text-center bg-dark">
-    <div class="container text-white py-4 py-lg-5">
-      <h4>Servicio Vulcanológico de Guatemala<br></h4>
+  <footer class="text-center">
+    <div class="container text-white py-2 py-lg-3">
+      <h6>Servicio Vulcanológico de Guatemala<br></h6>
     </div>
   </footer>
   <script src="js/jquery-3.5.1.js"></script>

@@ -1,15 +1,4 @@
 
-
-document.getElementById("btnVisibility").addEventListener("click", () => {
-  var _type = document.querySelector("#pass");
-  if (_type.type === "password") {
-    _type.type = "text";
-    return;
-  }
-  _type.type = "password";
-  return;
-});
-
 function verifySession() {
 
   //verificamos los permisos del usuario según registro en SESSION

@@ -1,0 +1,44 @@
+
+.navbar{
+  background: black;
+}
+
+.nav-link{
+  color: white;
+}
+
+.nav-link:hover{
+  color: white;
+  text-decoration-line: underline;
+  text-decoration-color: #C84E13;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+.btn-danger{
+  border: none;
+  border-radius: 0px;
+}
+
+#bv{
+  color: white !important;
+}
+
+
+.bs-icon{
+  background: #C84E13;
+}
+
+.navbar .btn{
+  background-color: #BB2D3B;
+  border-radius: 0px;
+  color: white;
+}
+
+
+footer{
+  background: #C84E13;
+  opacity: 0.9;
+}
+
+

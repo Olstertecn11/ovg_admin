@@ -137,14 +137,16 @@ function verificar() {
         $("#aviso").css("display", "block");
         document.getElementById('NC').value = res[1];
         //document.getElementById('submitButton').disabled=true;
-        $("#submitButton").removeClass("btn-primary").addClass("btn-warning");
+        $("#msg").addClass("text-danger").removeClass("btn-success");
+        document.getElementById("msg").innerText = "Usuario Inválido";
 
       }
       else {
         $("#aviso").css("display", "none");
         document.getElementById('NC').value = ""
         //document.getElementById('submitButton').disabled=false;
-        $("#submitButton").removeClass("btn-warning").addClass("btn-primary");
+        $("#msg").addClass("text-success").removeClass("btn-danger");
+        document.getElementById("msg").innerText = "Usuario Válido";
       }
     }
   });
