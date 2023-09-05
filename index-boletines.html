@@ -9,21 +9,21 @@
   <link rel="stylesheet" href="assets/css/Articles-Badges.css">
   <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark.css">
   <link rel="stylesheet" href="css/alertify.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/nav.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
 </head>
 
 <body>
-  <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3">
+  <nav class="navbar navbar-expand-md py-3">
     <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span
-          class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"
-          style="background: var(--bs-yellow);"></span><span id="bv"></span></a><button data-bs-toggle="collapse"
-        class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span
-          class="navbar-toggler-icon"></span></button>
+          class="bs-icon-sm bs-icon-rounded d-flex justify-content-center align-items-center me-2 bs-icon"></span><span
+          id="bv"></span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5"><span
+          class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navcol-5">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link active" href="index-boletines.html">Boletines</a></li>
           <li class="nav-item"><a class="nav-link" href="index-noticias.html">Noticias</a></li>
-        </ul><a class="btn btn-primary ms-md-2" role="button" href="#" onclick="cerrarSesion();">Cerrar Sesión</a>
+        </ul><a class="btn btn-item ms-md-2" role="button" href="#" onclick="cerrarSesion();">Cerrar Sesión</a>
       </div>
     </div>
   </nav>
@@ -44,7 +44,7 @@
           <div class="d-flex">
             <div>
               <a href="bol-subir.html">
-                <button class="btn btn-primary" type="button" style="background: var(--bs-success);">Ingresar</button>
+                <button class="btn btn-item" type="button">Ingresar</button>
               </a>
             </div>
           </div>
@@ -57,21 +57,7 @@
           <div class="d-flex">
             <div>
               <a href="bol-consultar.html">
-                <button class="btn btn-primary" type="button" style="background: var(--bs-success);">Consultar</button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-auto" id="onad">
-        <div class="p-4"><span class="badge rounded-pill bg-danger mb-2">Administrativo</span>
-          <h4>Administrar Usuarios</h4>
-          <p>Desde este apartado usted puede ingresar al segmento de administración de usuarios del SMG</p>
-          <div class="d-flex">
-            <div>
-              <a href="admin-usuario.html">
-                <button class="btn btn-primary" type="button" style="background: var(--bs-dark);">Acceder</button>
+                <button class="btn btn-item" type="button">Consultar</button>
               </a>
             </div>
           </div>
@@ -79,9 +65,9 @@
       </div>
     </div>
   </div>
-  <footer class="text-center bg-dark">
-    <div class="container text-white py-4 py-lg-5">
-      <h4>Servicio Meteorológico de Guatemala<br></h4>
+  <footer class="text-center ">
+    <div class="container text-white py-2 py-lg-3">
+      <h6>Servicio Vulcanologico de Guatemala<br></h6>
     </div>
   </footer>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>

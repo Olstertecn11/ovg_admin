@@ -7,8 +7,10 @@ body{
 
 
 .btn-item{
-  background: #C84E13;
-  color: white;
+  /* background: #C84E13; */
+  background: black;
+  border: 1px solid #C84E13;
+  color: #C84E13;
 }
 
 .btn-item:hover{
